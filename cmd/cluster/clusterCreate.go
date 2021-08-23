@@ -231,7 +231,7 @@ func NewCmdClusterCreate() *cobra.Command {
 	 * Config File *
 	 ***************/
 
-	cmd.Flags().StringVarP(&configFile, "config", "c", "", "Path of a config file to use")
+	cmd.Flags().StringVarP(&configFile, "config", "c", "~/.k3d.yaml", "Path of a config file to use")
 	if err := cobra.MarkFlagFilename(cmd.Flags(), "config", "yaml", "yml"); err != nil {
 		log.Fatalln("Failed to mark flag 'config' as filename flag")
 	}
